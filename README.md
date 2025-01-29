@@ -1,4 +1,4 @@
-# Multe e Ricorsi
+# Multe e Ricorsi, Information Extraction con LLMs
 
 Questo repository si concentra sull'estrazione automatica di metadati dai documenti legali relativi ai ricorsi contro le multe per violazione del codice della strada.
 - Vengono estratte le seguenti _entità_: "num_verbale", "targa", "mail", "data", "cf_trasgressore", "cf_avvocato", "destinatario"
