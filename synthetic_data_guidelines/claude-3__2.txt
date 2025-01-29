@@ -1,0 +1,15 @@
+Testo di input:
+
+1. Il testo di input dovrebbe contenere le informazioni di base del ricorso, come il nome del destinatario (ad es. "PREFETTO DI NAPOLI").
+2. Dovrebbe includere i dettagli del richiedente, come nome, cognome, codice fiscale (ad es. "SBNVCN57P09C129L"), indirizzo di residenza.
+3. Dovrebbe fornire le informazioni dell'avvocato patrocinante, come nome, cognome, codice fiscale (ad es. "CPPLRT58E12B963C"), indirizzo dello studio, recapiti (telefono, fax, email).
+4. Dovrebbe contenere i dettagli del verbale oggetto del ricorso, come numero del verbale (ad es. "AP22190710994"), data di notifica, data dell'infrazione, targa del veicolo (ad es. "EV492KF"), orario e luogo dell'infrazione.
+5. Dovrebbe includere eventuali date rilevanti menzionate nel testo, come date di delibere comunali o date di validità di certificati digitali.
+
+Output JSON:
+
+1. La struttura JSON dovrebbe avere due parti principali: "entities" e "relations".
+2. Nella sezione "entities", ogni entità rilevante estratta dal testo di input dovrebbe essere mappata a una chiave appropriata, con il valore corrispondente.
+3. Nella sezione "relations", dovrebbero essere rappresentate le relazioni tra le entità, con una struttura ad oggetto contenente le chiavi "source", "relation" e "target".
+4. La chiave "source" dovrebbe contenere l'entità di partenza, la chiave "relation" dovrebbe descrivere la relazione specifica e la chiave "target" dovrebbe contenere l'entità di arrivo.
+5. Le entità e le relazioni dovrebbero essere estratte in modo accurato e coerente dal testo di input, per consentire un'elaborazione e un'analisi efficaci dei dati.

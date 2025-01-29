@@ -1,0 +1,15 @@
+Ecco delle indicazioni per descrivere come dovrebbe essere il testo di input:
+
+- Contenuto del documento: Il testo di input dovrebbe essere un documento  di un ricorso legale contro una contravvenzione stradale.
+- Formato non strutturato: Il testo di input è ottenuto tramite OCR da un documento PDF e presenta spesso errori di riconoscimento, come caratteri errati o simboli strani, rendendo la struttura irregolare e disorganizzata.
+- Informazioni legali e personali: Contiene dati identificativi personali e legali del ricorrente, come nome, data di nascita, codice fiscale, residenza.
+- Dettagli dell'avvocato: Include le informazioni dell'avvocato che rappresenta il ricorrente, come nome, indirizzo, codice fiscale e contatti.
+- Informazioni sul verbale contestato:  come numero del verbale, data, ora,  luogo, targa del veicolo e natura dell'infrazione includendo articoli violati.
+- Motivazioni del ricorso: Presenta una sezione dettagliata che elenca i motivi del ricorso contro i verbali di contravvenzione, spesso citando specifici articoli del codice della strada.
+- Richiesta di annullamento: Conclude con una richiesta formale di annullamento del verbale di contravvenzione e altre eventuali richieste, come l'archiviazione delle sanzioni pecuniarie e la richiesta di essere ascoltato personalmente.
+
+
+Ecco delle indicazioni su come trasformare il testo di input in un output JSON strutturato:
+- Creare un json "entities", che contenga le entità rilevanti (persone, luoghi, date, numeri di identificazione) classificate in categorie appropriate.
+- Creare un array "relations", che rappresenti le relazioni tra le entità, con una struttura ad oggetto contenente le chiavi "source", "relation" e "target" dove la chiave "source" contiene l'entità di partenza, la chiave "relation" descrive la relazione specifica e la chiave "target" contiene l'entità di arrivo.
+- Le entità e le relazioni devono essere estratte in modo accurato e coerente dal testo di input.

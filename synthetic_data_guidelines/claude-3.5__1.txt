@@ -1,0 +1,15 @@
+Ecco 5 punti elenco per descrivere come dovrebbe essere il testo di input:
+
+• Il testo di input dovrebbe essere un documento OCR di un ricorso legale contro una contravvenzione stradale.
+• Dovrebbe contenere informazioni personali del ricorrente come nome, cognome, data e luogo di nascita, residenza e codice fiscale.
+• Dovrebbe includere dettagli sull'avvocato che rappresenta il ricorrente, come nome, codice fiscale e contatti.
+• Dovrebbe fornire informazioni sul verbale contestato, come numero, data, luogo e natura dell'infrazione.
+• Dovrebbe contenere le motivazioni del ricorso e la richiesta di annullamento del verbale.
+
+Ecco 5 punti elenco su come trasformare il testo di input in un output JSON strutturato:
+
+• Identificare e estrarre le entità chiave come nomi, date, numeri di verbale, targhe, codici fiscali, ecc.
+• Categorizzare le entità estratte in tipi specifici (es. "data", "cf_trasgressore", "num_verbale", ecc.).
+• Creare un oggetto JSON "entities" che mappi ciascuna entità estratta al suo tipo.
+• Identificare le relazioni importanti tra le entità (es. data di notifica del verbale, data dell'infrazione).
+• Creare un array JSON "relations" che contenga oggetti che descrivono queste relazioni, specificando fonte, tipo di relazione e destinazione.

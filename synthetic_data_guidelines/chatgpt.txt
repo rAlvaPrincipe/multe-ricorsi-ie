@@ -1,0 +1,28 @@
+Caratteristiche del testo di input
+
+    Formato non strutturato: Il testo di input è ottenuto tramite OCR da un documento PDF e presenta spesso errori di riconoscimento, come caratteri errati o simboli strani, rendendo la struttura irregolare e disorganizzata.
+    Informazioni legali e personali: Contiene dati identificativi personali e legali del ricorrente, come nome, data di nascita, codice fiscale, e quelli relativi al veicolo e alle violazioni contestate.
+    Dettagli dell'avvocato: Include le informazioni dell'avvocato che rappresenta il ricorrente, come nome, indirizzo, codice fiscale e contatti.
+    Descrizione del ricorso: Presenta una sezione dettagliata che elenca i motivi del ricorso contro i verbali di contravvenzione, spesso citando specifici articoli del codice della strada.
+    Richiesta di annullamento: Conclude con una richiesta formale di annullamento del verbale di contravvenzione e altre eventuali richieste, come l'archiviazione delle sanzioni pecuniarie e la richiesta di essere ascoltato personalmente.
+
+Trasformazione del testo di input in output JSON strutturato
+
+    Identificazione delle entità chiave: Estrarre dal testo le entità chiave come il destinatario del ricorso, il codice fiscale del trasgressore, il codice fiscale dell'avvocato, le date rilevanti, il numero di verbale, la targa del veicolo e l'orario dell'infrazione.
+        Esempio: "PREFETTO": "destinatario"
+    Classificazione delle entità: Assegnare le etichette appropriate a ciascuna entità identificata nel testo per strutturare le informazioni in modo chiaro.
+        Esempio: "SBNVCN57P09C129L": "cf_trasgressore"
+    Creazione di relazioni tra le entità: Stabilire relazioni logiche tra le entità estratte per rappresentare i collegamenti e la sequenza temporale degli eventi descritti nel testo.
+        Esempio: { "source": "AP22190710994", "relation": "data_notifica", "target": "27/08/2022" }
+    Riconoscimento delle date e orari: Identificare e categorizzare tutte le date e gli orari presenti nel testo, associandoli agli eventi corrispondenti (es. data dell'infrazione, data della notifica).
+        Esempio: "27/08/2022": "data_notifica"
+    Organizzazione in formato JSON: Strutturare tutte le informazioni estratte in un formato JSON chiaro e coerente, includendo sia le entità identificate che le relazioni tra di esse.
+
+
+Ulteriori Considerazioni
+
+    Correzione degli errori OCR: Durante l'estrazione, è fondamentale considerare gli errori comuni dell'OCR e applicare tecniche di correzione automatica o manuale per migliorare l'accuratezza delle informazioni.
+    Validazione dei dati: Verificare l'accuratezza delle informazioni estratte confrontandole con formati noti (es. formato del codice fiscale, formato delle targhe, ecc.).
+    Gestione delle varianti linguistiche: Assicurarsi di riconoscere e gestire varianti linguistiche e ortografiche, soprattutto in termini legali e di nomenclatura (es. "cf", "c.f.", "codice fiscale").
+    Privacy e sicurezza dei dati: Trattare i dati personali con attenzione, garantendo che le informazioni sensibili siano gestite in conformità alle normative sulla privacy.
+    Automazione del processo: Sviluppare algoritmi e modelli di machine learning per automatizzare l'estrazione e la strutturazione delle informazioni, migliorando l'efficienza e riducendo gli errori manuali.

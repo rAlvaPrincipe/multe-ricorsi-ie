@@ -1,0 +1,15 @@
+Proprietà del testo di input:
+
+1. Il testo di input dovrebbe essere un ricorso legale relativo a una violazione del codice della strada.
+2. Dovrebbe contenere i dati identificativi del cittadino, come nome, cognome, codice fiscale, indirizzo di residenza.
+3. Dovrebbe includere i dettagli del verbale di contravvenzione, come numero del verbale, data e luogo dell'infrazione, targa del veicolo.
+4. Dovrebbe specificare le motivazioni per l'annullamento del verbale, come la prescrizione del termine di notifica.
+5. Dovrebbe essere firmato dall'avvocato patrocinante, con i suoi dati identificativi.
+
+Trasformazione del testo di input in output JSON:
+
+1. Identificare le entità rilevanti nel testo, come nomi, date, numeri di verbale, targhe, codici fiscali, ecc.
+2. Assegnare a ogni entità una chiave appropriata nel JSON "entities", ad esempio "cf_trasgressore" per il codice fiscale del trasgressore.
+3. Estrarre le relazioni tra le entità, come la data di notifica e la data dell'infrazione associate al numero del verbale.
+4. Creare un array "relations" contenente oggetti con le proprietà "source", "relation" e "target" per rappresentare tali relazioni.
+5. Assicurarsi che il JSON di output contenga tutte le informazioni rilevanti del testo di input in modo strutturato e facilmente accessibile.

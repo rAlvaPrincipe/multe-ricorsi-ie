@@ -1,0 +1,15 @@
+Ecco 5 punti elenco per descrivere come dovrebbe essere il testo di input:
+
+• Dovrebbe contenere informazioni dettagliate sul ricorrente, inclusi nome, data di nascita, residenza e codice fiscale.
+• Dovrebbe includere i dettagli dell'avvocato che rappresenta il ricorrente, come nome, codice fiscale e recapiti.
+• Dovrebbe specificare chiaramente il tipo di ricorso e l'autorità a cui è indirizzato (es. Prefetto).
+• Dovrebbe contenere i dettagli del verbale contestato, inclusi numero, data di notifica, e natura dell'infrazione.
+• Dovrebbe presentare le motivazioni del ricorso in modo chiaro e strutturato, citando eventuali leggi o regolamenti pertinenti.
+
+Ecco 5 punti elenco su come trasformare il testo di input in un output JSON strutturato:
+
+• Identificare e estrarre tutte le entità rilevanti (persone, luoghi, date, numeri di identificazione) e classificarle in categorie appropriate.
+• Riconoscere e mappare le relazioni tra le diverse entità (es. data di notifica associata a un specifico numero di verbale).
+• Strutturare le informazioni in due oggetti JSON principali: "entities" per le entità individuali e "relations" per i collegamenti tra esse.
+• Utilizzare chiavi descrittive e coerenti per ogni tipo di entità o relazione (es. "cf_trasgressore" per il codice fiscale del ricorrente).
+• Assicurarsi che tutti i valori estratti siano formattati correttamente e coerentemente (es. date in un formato standard, codici fiscali in maiuscolo).

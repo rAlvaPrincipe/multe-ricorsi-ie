@@ -1,0 +1,23 @@
+
+<Task>
+Comportati come se fossi un maestro nella generazione delle proprietà chiave negli esempi forniti. Devi spiegare le proprietà del testo di input e dell'output JSON.
+La coppia dovrebbe contenere  come testo di input un ricorso ottenuto tramite OCR da un documento PDF come esplicitato nella sezione "contesto", mentre due JSON contenenti le informazioni rilevanti come output.
+Genera 5 punti elenco per ciascuna frase descrivendo come dovrebbe essere il testo di input. Genera anche 5 punti elenco su come trasformare un testo di input in un output JSON strutturato.
+</Task>
+
+<Contesto>
+Il contesto è quello dei ricorsi legali in cui un cittadino chiede che uno o più verbali realitivi a violazioni del codice della strada vengano annullati.
+Il cittadino può affidarsi a uno o più avvocati e appellarsi a una o più motivazioni per richiedere tale annullamento, a questo scopo fornisce diversi dati identificativi del mezzo, personali e della legislazione.
+</Contesto>
+
+
+
+<esempio>
+Input:
+{Inserire documento di esempio}
+
+
+Output:
+{inserire JSON output atteso}
+
+ </esempio>
