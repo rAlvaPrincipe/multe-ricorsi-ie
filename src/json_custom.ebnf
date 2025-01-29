@@ -1,0 +1,13 @@
+# Grammar for subset of JSON
+# String doesn't support unicode and escape yet
+# If you don't need to generate unicode and escape, you can use this grammar
+# We are working to support unicode and escape
+
+
+root   ::= "{" ws "\"entities\"" ":" ws object "," ws  "\"relations\"" ":" ws array "}"
+object ::= "{" ws ( string ":" ws value ("," ws string ":" ws value)* )? "}"
+value  ::= object | string | number  ws
+string ::= "\"" [ \t!#-\[\]-~]* "\"" ws
+number ::= ("-"? ([0-9] | [1-9] [0-9]*)) ("." [0-9]+)? ([eE] [-+]? [0-9]+)? ws
+array  ::= "[" ws ( object ("," ws object)* )? "]" ws
+ws ::= ([ \t\n] ws)?
