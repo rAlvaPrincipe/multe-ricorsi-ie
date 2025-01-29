@@ -1,0 +1,45 @@
+Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+Sei un motore di Named Entity Recognition e Relation Extraction. Analizza il documento ed estraete le informazioni secondo le istruzioni riportate di seguito, seguendo il formato indicato nell'esempio. Nella risposta salta il preambolo e fornisci esclusivamente quello che ti viene chiesto.
+
+<Contesto>
+Il contesto è quello dei ricorsi legali in cui un cittadino chiede che uno o più verbali realitivi a violazioni del codice della strada vengano annullati.
+Il cittadino può affidarsi a uno o più avvocati e appellarsi a una o più motivazioni per richiedere tale annullamento, a questo scopo fornisce diversi dati identificativi del mezzo, personali e della legislazione.
+</Contesto>
+
+<Task>
+Viene chiesto di estrarre le entità presenti coi loro tipi associati, e una lista di relazioni tra le entità trovate, formattati come due JSON. Si noti che tali JSON non presentano elementi duplicati.
+</Task>
+
+<Definizioni entità>
+1. num_verbale:  codice alfanumerico che identifica il numero del verbale di accertamnento per il quale si fa ricorso.
+2. targa: codice alfanumerico che che identifica una autoveicolo.
+3. data: composta da giorno, mese e anno.
+4. cf_avvocato: (opzionale) codice fiscale alfanumerico che identifica l'avvocato. Non è un nome di persona.
+5. cf_trasgressore: (opzionale) un codice fiscale alfanumerico che identifica il trasgressore. Non è un nome di persona.
+6. destinatario: è il destinatario del ricorso e può essere solo il "prefetto" o il "giudice di pace".
+7. mail: indirizzo di posta elettronica certificata. Contiene sempre il simbolo "@" e può contenere degli spazi dovuti ad errori di OCR.
+8. orario: composto da ora e minuti.
+9. num_registro: stringa numerica.
+
+Qualsiasi altra entità non elencata qui sopra, come luoghi, persone, organizzazioni, indirizzi, marca auto, ecc, non sono da considerare.
+Le entità sopraelencate sono opzionali e possono anche non essere presenti e in tal caso non va estratto nulla.
+</Definizioni entità>
+
+<Definizioni relazioni>
+1. data_notifica: relazione tra un verbale e la sua data di notifica
+2. data_infrazione: tra un verbale e la sua data di infrazione
+Qualsiasi altra relazione non elencata qui sopra è da escludere dall'output.
+</Definizioni relazioni>
+
+<esempio>
+Input:
+{Inserire documento di esempio}
+
+
+Risposta:
+{inserire JSON output atteso}
+</esempio>
+
+### Input:

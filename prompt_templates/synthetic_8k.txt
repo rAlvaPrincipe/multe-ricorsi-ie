@@ -1,0 +1,75 @@
+<Task>
+Sei un generatore di dati sintetici e il tuo scopo è di generare una coppia di "Input" e "Output" che serviranno per creare un dataset per allenare un modello di Information Extraction. I dati sintentici devono rispecchiare il contesto descritto nella sezione "Context" e lo stile fornito in seguito e negli esempio forniti nelle sezioni "Example 1", "Example 2" ed "Example 3".
+
+Ecco delle indicazioni per descrivere come dovrebbe essere il testo di input:
+- Contenuto del documento: Il testo di input dovrebbe essere un documento  di un ricorso legale contro una contravvenzione stradale.
+- Formato non strutturato: Il testo di input è ottenuto tramite OCR da un documento PDF e presenta spesso errori di riconoscimento, come caratteri errati o simboli strani, rendendo la struttura irregolare e disorganizzata.
+- Informazioni di interesse per l'estrazione: contiene le informazioni descritte nella sezione "Entities_definitions" e "Relations_definitions" utili per la generazione dell'Output.
+- Informazioni legali e personali: Contiene dati identificativi personali e legali del ricorrente, come nome, data di nascita, codice fiscale, residenza.
+- Dettagli dell'avvocato: Include le informazioni dell'avvocato che rappresenta il ricorrente, come nome, indirizzo, codice fiscale e contatti.
+- Informazioni sul verbale contestato:  come numero del verbale, data, ora,  luogo, targa del veicolo e natura dell'infrazione includendo articoli violati.
+- Motivazioni del ricorso: Presenta una sezione dettagliata che elenca i motivi del ricorso contro i verbali di contravvenzione, spesso citando specifici articoli del codice della strada.
+- Richiesta di annullamento: Conclude con una richiesta formale di annullamento del verbale di contravvenzione e altre eventuali richieste, come l'archiviazione delle sanzioni pecuniarie e la richiesta di essere ascoltato personalmente.
+- nota che un unico ricorso può contestare uno o più verbali e ognuno di questi ha associato diverse date.
+
+Ecco delle indicazioni su come trasformare il testo di input in un output JSON strutturato:
+- Contenuto: è un insieme di  entità e relazioni che devono essere estratte in modo accurato e coerente dal testo Input.
+- Formato: l'output si presenta come un json "entities" e come un array di json "relations".
+- Il json "entities": contiene le entità rilevanti descritte nella sezione "Entities_definitions" dove la chiave è l'entità e il valore è il tipo.
+- L'array di json "relations":  rappresenta le relazioni tra le entità descritte nella sezione "Relations_definitions", con una struttura ad oggetto contenente le chiavi "source", "relation" e "target" dove la chiave "source" contiene l'entità di partenza, la chiave "relation" descrive la relazione specifica e la chiave "target" contiene l'entità di arrivo.
+</Task>
+
+<Context>
+Il contesto è quello dei ricorsi legali in cui un cittadino chiede che uno o più verbali realitivi a violazioni del codice della strada vengano annullati.
+Il cittadino può affidarsi a uno o più avvocati e appellarsi a una o più motivazioni per richiedere tale annullamento, a questo scopo fornisce diversi dati identificativi del mezzo, personali e della legislazione.
+</Context>
+
+
+<Entities_definitions>
+1. num_verbale:  codice alfanumerico che identifica il numero del verbale di accertamnento per il quale si fa ricorso.
+2. targa: codice alfanumerico che che identifica una autoveicolo.
+3. data: composta da giorno, mese e anno.
+4. cf_avvocato: (opzionale) codice fiscale alfanumerico che identifica l'avvocato. Non è un nome di persona.
+5. cf_trasgressore: (opzionale) un codice fiscale alfanumerico che identifica il trasgressore. Non è un nome di persona.
+6. destinatario: è il destinatario del ricorso e può essere solo il "prefetto" o il "giudice di pace".
+7. mail: indirizzo di posta elettronica certificata. Contiene sempre il simbolo "@" e può contenere degli spazi dovuti ad errori di OCR.
+8. orario: composto da ora e minuti.
+9. num_registro: stringa numerica.
+
+Qualsiasi altra entità non elencata qui sopra, come luoghi, persone, organizzazioni, indirizzi, marca auto, ecc, non sono da considerare.
+Le entità sopraelencate sono opzionali e possono anche non essere presenti e in tal caso non va estratto nulla.
+</Entities_definitions>
+
+<Relations_definitions>
+1. data_notifica: relazione tra un verbale e la sua data di notifica
+2. data_infrazione: tra un verbale e la sua data di infrazione
+Qualsiasi altra relazione non elencata qui sopra è da escludere dall'output.
+</Relations_definitions>
+
+
+<Example 1>
+Input:
+{Inserire documento di esempio}
+
+Output:
+{Inserisci JSON output atteso}
+</Example 1>
+
+<Example 2>
+Input:
+{Inserire documento di esempio}
+
+Output:
+{Inserisci JSON output atteso}
+</Example 2>
+
+<Example 2>
+Input:
+{Inserire documento di esempio}
+
+Output:
+{Inserisci JSON output atteso}
+</Example 2>
+
+Genera un ricorso lungo e che include più di due verbali
+Input:

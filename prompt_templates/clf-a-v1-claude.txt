@@ -1,0 +1,33 @@
+<Contesto>
+Il contesto è quello dei ricorsi legali in cui un cittadino chiede che uno o più verbali realitivi a violazioni del codice della strada vengano annullati.
+Il cittadino può affidarsi a uno o più avvocati e appellarsi a una o più motivazioni per richiedere tale annullamento, a questo scopo fornisce diversi dati identificativi del mezzo, personali e della legislazione.
+</Contesto>
+
+<Task>
+Viene chiesto di classificare il ricorso assegnando uno o più articoli del codice della strada violati  dal ricorrente. L'output viene formattato come una lista "articoli_violati" di documenti JSON in cui ogni documento ha due campi indicando sia il codice dell'articolo_violato (cod_articolo_violato) sia una spiegazione che la supporti (spiegazione).
+</Task>
+
+
+<Definizioni>
+L'infrazione oggetto del ricorso può far riferimento a uno o più dei seguenti articoli del codice della strada:
+1. "7": Regolamentazione della circolazione nei centri abitati.
+2. "142": Limiti di velocità.
+3. "146": Violazione della segnaletica stradale.
+4. "148": Sorpasso.
+5. "157": Arresto, fermata e sosta dei veicoli.
+6. "159": Divieto di fermata e di sosta dei veicoli.
+7. "171": Uso del casco protettivo per gli utenti di veicoli a due ruote.
+
+Nessun altro articolo al di fuori di questi è da considerare.
+</Definizioni>
+
+<esempio>
+Input:
+{Inserire documento di esempio}
+
+
+Risposta:
+{inserire JSON output atteso}
+</esempio>
+
+Input:

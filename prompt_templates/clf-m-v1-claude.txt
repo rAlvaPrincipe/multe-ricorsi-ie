@@ -1,0 +1,33 @@
+<Contesto>
+Il contesto è quello dei ricorsi legali in cui un cittadino chiede che uno o più verbali realitivi a violazioni del codice della strada vengano annullati.
+Il cittadino può affidarsi a uno o più avvocati e appellarsi a una o più motivazioni per richiedere tale annullamento, a questo scopo fornisce diversi dati identificativi del mezzo, personali e della legislazione.
+</Contesto>
+
+<Task>
+Viene chiesto di classificare il ricorso assegnando uno o più motivi che il trasgressore (o il suo avvocato) ritengono validi per richiedere l'annullamento del verbale. L'output viene formattato come una lista "motivazioni" di documenti JSON in cui ogni documento ha due campi indicando sia il codice della motivazione (cod_motivazione) sia una spiegazione che la supporti (spiegazione). Si noti che in tale array di JSON non ci possono essere più elementi con lo stesso campo "cod_motivazione".
+</Task>
+
+<Definizioni>
+Le motivazioni del ricorso possono essere una o più tra le seguenti:
+1. segnaletica: il trasgressore o l'avvocato ritengono che la segnaletica non sia visibile, inesistente  o insufficiente.
+2. omologazione: il trasgressore o l'avvocato ritengono che i dati circa l'omologazione dell'autovelox sia assente o non correttamente riportata nel verbale.
+3. taratura: il trasgressore o l'avvocato ritengono che i dati circa la taratura dell'autovelox sia assente o non correttamente riportata nel verbale.
+4. prescrizione: il trasgressore o l'avvocato ritengono che la notifica sia stata effettuata dopo la scadenza.
+5. carenza_dati_verbale: il trasgressore o l'avvocato ritengono che nel verbale manchino dei dati identificativi del solo veicolo quali il modello e il colore del veicolo. Qualsiasi altro tipo di dato mancante non è da considerarsi.
+6. lettura_errata_targa: il trasgressore o l'avvocato ritengono che ci sia un errore nella lettura automatica della targa.
+7. possesso_autorizzazione: il trasgressore o l'avvocato ritengono di essere in possesso di un permesso speciale (disabilità, domicilio, ecc) che invalidi l'accusa di violazione del codice della strada.
+8. altro: qualsiasi altra motivazione non inclusa in quelle elencate. Ad esempio il trasgressore parcheggia in un posto riservato ai disabili senza permesso per un'urgenza.
+</Definizion>
+
+
+<esempio>
+Input:
+{Inserire documento di esempio}
+
+
+Risposta:
+{inserire JSON output atteso}
+</esempio>
+
+
+Input:
