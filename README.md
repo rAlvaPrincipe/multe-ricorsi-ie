@@ -1,4 +1,6 @@
 # Multe e Ricorsi
+
+Questo repository si concentra sull'estrazione automatica di metadati dai documenti legali relativi ai ricorsi contro le multe per violazione del codice della strada.
 - Vengono estratte le seguenti _entità_: "num_verbale", "targa", "mail", "data", "cf_trasgressore", "cf_avvocato", "destinatario"
 - Vengono estratte le seguenti _relazioni_: "data_infrazione", "data_notifica"
 - Vengono riconosciuti i seguenti articoli violati: "7", "142", "146", "148", "157", "159", "171"
@@ -8,7 +10,7 @@
 
 
 
-### Invocazione
+## Invocazione
 
 - Usa lo script invoke.py
 - Specifica il nome del modello LLM che desideri utilizzare.
